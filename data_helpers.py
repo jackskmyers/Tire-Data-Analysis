@@ -26,3 +26,12 @@ def standard_deviation(expected_values, fitted_values):
 
 def export_dataframe_to_mat(output_path, dataframe):
     sio.savemat(output_path, dataframe.to_dict("list"))
+
+def get_nearest_value(possible_values, input_value):
+    closest_value, distance = None, 0
+    for value in possible_values:
+        test_dist = abs(value - input_value)
+        if not distance or test_dist < distance:
+            distance = test_dist
+            closest_value = value
+    return closest_value

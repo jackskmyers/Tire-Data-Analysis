@@ -3,7 +3,7 @@ clc
 clear
 % requires tire_data repo to be initialized. run 'make get_data' in
 % repo folder to get data. Request access to repo if command fails
-load(fileparts(matlab.desktop.editor.getActiveFilename) + "/../tire_data/processed_data/tire_data/processed_data/cornering_hoosier_lc10_16x7-5_10x8.mat");
+load(fileparts(matlab.desktop.editor.getActiveFilename) + "/../tire_data/processed_data/cornering_hoosier_lc10_16x7-5_10x8.mat");
 
 %% DATA FILTERING
 % filter out unwanted pressure and velocities
@@ -94,7 +94,7 @@ fo.MaxFunEvals = MaxFunEvals;
 disp("fit4 - standard_dev is: " + gof4.rmse);
 
 %% PLOT FIT RESULTS
-plot3(req_SA.', req_FZ.', req_FY.');
+%% plot3(req_SA.', req_FZ.', req_FY.');
 hold on;
 
 mesh_sa = -13+0.4*(0:65);
