@@ -193,14 +193,7 @@ def main():
         # export data back to matlab file
         data_helpers.export_dataframe_to_mat(f'{output_directory}{output_name}.mat', df)
 
-def get_nearest_value(possible_values, input_value):
-    closest_value, distance = None, 0
-    for value in possible_values:
-        test_dist = abs(value - input_value)
-        if not distance or test_dist < distance:
-            distance = test_dist
-            closest_value = value
-    return closest_value
+
 
 def moving_average(interval, window_size):
     window = np.ones(int(window_size))/float(window_size)
